@@ -1,0 +1,30 @@
+ 
+    <div class="article-container">
+    <div class="col-md-2 point">
+        <h2 >{{article.vote}}</h2>
+        <label for="">points</label>
+    </div>
+    <div class="col-md-5 vote-block">
+        <div class="title-link">
+            <h3 (click)="clicked(article)" >{{article.title}}</h3>
+            <h5>{{article.link}}</h5>
+        </div>
+        <div class="vote">
+            <button class="btn btn-success" (click)="votePlus()">+ PLUS</button>
+            <label for="">  </label>
+            <button class="btn btn-warning" (click)="voteMoins()">- MOINS</button>
+        </div>
+    </div>
+</div>
+<style> 
+.article-container{
+    margin-top:20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 10px 15px gray;
+    padding-bottom: 10px;
+}
+button{
+    cursor: pointer;
+}
+</style>
